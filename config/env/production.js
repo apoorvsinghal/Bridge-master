@@ -8,7 +8,7 @@ module.exports = {
   },
   port: process.env.PORT || 8443,
   db: {
-    uri: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/mean',
+    uri: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://heroku_0f6schl1:t7jvjbk40q2rojrfen2nrgmq46@ds061984.mongolab.com:61984/heroku_0f6schl1' ,
     options: {
       user: '',
       pass: ''
