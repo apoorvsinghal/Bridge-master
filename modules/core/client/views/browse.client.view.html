@@ -1,0 +1,162 @@
+<div class="browse" ng-controller="BrowseController">
+
+  <div class="hero-container our-portfolio-hero">
+            <div class="container">
+
+    <div class="hero-directory-header">
+        <h1 class="hero-title-text">
+            <img class="fundersclub-logo" src="modules/core/client/img/ico/logo.png"
+                    alt="Bridge">
+        </h1>
+        <p class="hero-subtext">
+            Bridge seeks to invest in the world's best startups and the budding entreprenurs who lead them. Browse the Bridge startups and Investors below.
+        </p>
+    </div>
+
+ <div class="filters">
+        <div class="row">
+            <div class="col-xs-12 col-md-2">
+                <div class="hide-below-md text-right text-muted">
+                    <div class="form-control-static">Filter by:</div>
+                </div>
+                <div class="hide-above-sm text-muted text-left">
+                    Filter by:
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-2">
+                <select data-customer-type style="width: 100%" class="form-control" ng-model= "browse_by" ng-change="browse();">
+
+
+                            <option value="">All Companies</option>
+
+
+
+                            <option value="startups">Startups</option>
+
+
+
+                            <option value="investors" >Investors</option>
+
+
+                </select>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-2">
+                <select data-product-type style="width: 100%" class="form-control" ng-model="location" ng-change="location_browse();">
+
+
+                            <option value="">Location</option>
+
+
+
+                            <option value="Delhi">Delhi</option>
+
+
+
+                            <option value="Noida">Noida</option>
+
+
+
+                            <option value="Mumbai">Mumbai</option>
+
+
+
+                            <option value="Bangalore">Bangalore</option>
+
+
+
+                            <option value="Pune">Pune</option>
+
+
+
+                            <option value="Hyderabad">Hyderabad</option>
+
+
+
+                            <option value="Kolkata">Kolkata</option>
+
+
+
+                            <option value="Surat">Surat</option>
+
+                </select>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-2">
+                <select data-industry style="width: 100%" class="form-control" ng-model="industry" ng-change="industry_browse();">
+
+                    	   <option value="">Industry</option>
+
+                            <option value="Media Services">Media Services</option>
+
+                            <option value="Web">Web Services</option>
+
+                            <option value="Health">Health Care Services</option>
+
+                            <option value="Education">Education</option>
+
+                            <option value="Food">Food And Drink</option>
+
+                            <option value="Consumer Services">Consumer Services</option>
+
+                            <option value="IT Services">IT Services</option>
+
+                            <option value="Business Services">Business Services</option>
+
+                            <option value="Financial Services">Financial Services</option>
+
+
+                </select>
+            </div>
+            <div class="hide-below-md col-md-2"></div>
+        </div>
+    </div>
+
+            </div>
+        </div>
+
+
+
+
+        <!-- <table align="center" class="browse_table">
+					<tr ng-repeat="person in startups track by $index">
+							<td ng-click="search(person.company, person.website_url)"><div style="font-size: 32px; color: #09C;">{{person.company}}</div><div style="padding-top: 2px; font-size: 24px;color: #787878;">{{person.industry}} , {{person.loc}}</div>
+                            <div style="padding-top: 2px; font-size: 15px;">{{person.website_url}}{{person.pitch_line}}</div></td>
+
+					</tr>
+
+			</table>-->
+
+ <div class="container primary-content-container our-portfolio">
+
+    <div class="fund-summary-group">
+
+            <div class="col-xs-12 col-sm-5 col-md-4 fund-summary"
+                    data-customer-type-val="enterprise"
+                    data-product-type-val="software"
+                    data-business-model-val="subscription"
+                    data-industry-val="humanresources" style="height: 260px;" ng-repeat="person in startups track by $index">
+                <div class="partnership-card">
+                    <div class="fund-basic-info-section partnership-card-section">
+                        <a href="#" ng-click="search(person.companyname)">
+
+                            <div class="fund-logo">
+                                <img src="https://d2aezjsmcp2rsz.cloudfront.net/companylogos/talentbin.png" alt="TalentBin"/>
+                            </div>
+
+                            <div class="titles">
+                                <h3>{{person.username}}</h3>
+                                <div class="fund-details-list">{{person.industry}}</div>
+
+                                    <label class="label label-success">{{person.location}}</label>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="fund-info-section partnership-card-section">
+                        <p class="blurb">{{person.pitch_line}}{{person.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>
+
+</div>

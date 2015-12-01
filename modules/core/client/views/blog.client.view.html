@@ -1,0 +1,24 @@
+<div ng-controller="BlogController">
+
+<h1>Bridge Blog</h1>
+
+<form name="blogForm" ng-submit="addBlog(userForm.$valid)" class="signin" novalidate autocomplete="off">
+  <fieldset>
+    <div class="form-group" show-errors>
+      <label for="firstName">Blog Heading</label>
+      <input type="text" id="blog_head" name="blog_head" class="form-control" ng-model="blog.blog_head" placeholder="Blog Head" required>
+    </div>
+    <div class="form-group" show-errors>
+      <label for="blog_content">Blog Content</label>
+      <input type="text" id="blog_content" name="blog_content" class="form-control" ng-model="blog.blog_content" placeholder="Blog Content" required>
+
+    </div>
+
+        <div class="text-center form-group">
+      <button type="submit" class="btn btn-primary">Add Post</button>
+      &nbsp; or&nbsp;
+    </div>
+  </fieldset>
+</form>
+
+</div>

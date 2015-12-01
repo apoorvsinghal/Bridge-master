@@ -1,0 +1,474 @@
+<section ng-controller="BrowseController">
+
+<div class="header-callout "
+                data-header-callout>
+            <div class="container">
+            </div>
+        </div>
+
+        <div class="hero-container ">
+            <div class="container">
+
+
+
+
+            </div>
+        </div>
+
+            <div class="container primary-content-container company-new add-top-gutter"
+                 style=""
+                 >
+
+
+<div class="partnership-card company-tile" itemscope itemtype="http://schema.org/Organization"  ng-repeat = "person in companies">
+    <div class="partnership-card-section">
+        <div class="fund-logo">
+
+                <img src="https://d2aezjsmcp2rsz.cloudfront.net/companylogos/teespring_St4uquE.png" itemprop="logo"
+                        alt="Teespring's logo">
+
+        </div>
+
+        <div class="fund-info">
+            <h2>{{person.company}}</h2>
+
+            <ul class="fund-details-list">
+
+                    <li>
+                        <a target="_blank" href="http://teespring.com/" itemprop="sameAs">
+                            teespring.com</a>
+                    </li>
+
+
+                    <li>
+                        {{person.loc}}
+                    </li>
+
+
+                    <li>
+                        {{person.industry}}
+                    </li>
+
+            </ul>
+
+            <p itemprop="description">{{person.pitch_line}}</p>
+
+            <p ng-show="authentication.user" itemprop="description"><button class="btn sign-btn" style="width: 10%;" ng-click="follow();">Follow</button></p>
+        </div>
+    </div>
+</div>
+
+
+    <div class="row">
+
+        <div class="col-xs-12 col-md-6">
+
+
+
+
+
+
+    <div class="news-and-press partnership-card" id="news-and-press">
+        <div class="partnership-card-header
+                ">
+            <div class="info">
+                <h3>News and Press</h3>
+
+            </div>
+
+
+
+        </div>
+
+            <div class="partnership-card-section" data-news-and-press
+
+                    >
+                <a target="_blank" href="http://www.businessinsider.com/teespring-glyn-williams-top-seller-profile-2015-11">
+                    <h4>How a 51-year-old who was forced out of his job by cancer used a T-shirt startup to make $2 million in 8 months</h4>
+                </a>
+                <div class="publisher">
+                    <i class="fa fa-bookmark"></i> Business Insider
+                    &bull;
+                    Nov. 4, 2015
+                </div>
+
+                    <p>Teespring itself is changing. It is no longer an unknown platform, a Wild West with limitless opportunity for the right entrepreneur. More than 4 million people in the US bought things from Teespring last year. It has expanded beyond T-shirts into other kinds of clothes. In late September, Teespring began an expansion into Europe, and in August it struck a licensing deal with the NFL.</p>
+
+            </div>
+
+            <div class="partnership-card-section" data-news-and-press
+
+                    >
+                <a target="_blank" href="http://fortune.com/2015/09/28/t-shirt-teespring-funding/">
+                    <h4>This t-shirt company is making its customers rich</h4>
+                </a>
+                <div class="publisher">
+                    <i class="fa fa-bookmark"></i> Forbes
+                    &bull;
+                    Sept. 28, 2015
+                </div>
+
+                    <p>Teespring, a San Francisco-based startup, lets people create custom t-shirt designs and then sell them online without having to worry about inventory. Its sales pitch is that it helps fuel entrepreneurship around the world.</p>
+
+            </div>
+
+            <div class="partnership-card-section" data-news-and-press
+
+
+                        style="display: none;"
+                    >
+                <a target="_blank" href="http://www.forbes.com/sites/alexkonrad/2015/08/26/teespring-and-nfl-team-up-for-tees/">
+                    <h4>The NFL And Teespring Team Up To Sell Fan-Created Custom T-Shirts For First Time</h4>
+                </a>
+                <div class="publisher">
+                    <i class="fa fa-bookmark"></i> Forbes
+                    &bull;
+                    Aug. 26, 2015
+                </div>
+
+                    <p>The NFL and startup Teespring announced a partnership on Wednesday to allow licensed apparel to be sold on the startup's website, connecting America's most popular sports league to a marketplace that sells millions of user-created products. The deal could pave the way to much more personalized apparel with NFL licensed images, and a path to enormous scale for the high-growth startup.</p>
+
+            </div>
+
+            <div class="partnership-card-section" data-news-and-press
+
+
+                        style="display: none;"
+                    >
+                <a target="_blank" href="http://paymentweek.com/2015-7-28-partnership-between-teespring-and-payoneer-to-serve-emerging-markets-7824/">
+                    <h4>Partnership Between Teespring and Payoneer to Serve Emerging Markets</h4>
+                </a>
+                <div class="publisher">
+                    <i class="fa fa-bookmark"></i> PaymentWeek
+                    &bull;
+                    July 28, 2015
+                </div>
+
+                    <p>Online payment services company Payoneer and e-commerce company Teespringare partnering to expand payment options in emerging markets.</p>
+
+            </div>
+
+            <div class="partnership-card-section" data-news-and-press
+
+
+                        style="display: none;"
+                    >
+                <a target="_blank" href="http://www.prnewswire.com/news-releases/teespring--manhead-merchandising-team-up-to-create-social-commerce-opportunities-for-musicians-300081378.html">
+                    <h4>Teespring and Manhead Merchandising Team Up to Create Social Commerce Opportunities for Musicians </h4>
+                </a>
+                <div class="publisher">
+                    <i class="fa fa-bookmark"></i> PR Newswire
+                    &bull;
+                    May 12, 2015
+                </div>
+
+                    <p>Leading social commerce platform Teespring today announced it has partnered with music merchandise company Manhead Merchandising to deliver custom apparel for its portfolio of music artists. This partnership, an industry first, enables Manhead Merchandising to leverage Teespring&#39;s innovative platform to expand its ecommerce business.</p>
+
+            </div>
+
+            <div class="partnership-card-section" data-news-and-press
+
+
+                        style="display: none;"
+                    >
+                <a target="_blank" href="http://www.bloomberg.com/news/articles/2015-04-16/how-your-t-shirt-can-make-you-rich">
+                    <h4>How Your T-shirt Can Make You Rich </h4>
+                </a>
+                <div class="publisher">
+                    <i class="fa fa-bookmark"></i> Bloomberg Business
+                    &bull;
+                    April 16, 2015
+                </div>
+
+                    <p>Teespring, one of the top T-shirt sellers in the U.S., printed more than 7 million shirts last year. Hundreds of people like Hsu and Springer made more than $100,000 in 2014 selling tees through the company's site; 20 collected more than $1 million, according to Chief Executive Officer Walker Williams.</p>
+
+            </div>
+
+            <div class="partnership-card-section" data-news-and-press
+
+
+                        style="display: none;"
+                    >
+                <a target="_blank" href="http://techcrunch.com/2015/01/28/custom-apparel-platform-teespring-acquires-london-based-fabrily-to-expand-internationally/">
+                    <h4>Custom Apparel Platform Teespring Acquires London Based Fabrily to Expand Internationally</h4>
+                </a>
+                <div class="publisher">
+                    <i class="fa fa-bookmark"></i> TechCrunch
+                    &bull;
+                    Jan. 28, 2015
+                </div>
+
+                    <p>Fast-growing custom apparel startup Teespring, which is backed by nearly $57 million from Andreesen Horowitz, Khosla Ventures and others, is making a move to expand its footprint globally through the strategic acquisition of European apparel platform Fabrily. </p>
+
+            </div>
+
+            <div class="partnership-card-section" data-news-and-press
+
+
+                        style="display: none;"
+                    >
+                <a target="_blank" href="http://www.forbes.com/sites/alexkonrad/2014/11/18/teespring-says-it-making-millionaires-raises-millions/">
+                    <h4>Teespring Says It&#39;s Minting New Millionaires Selling Its T-Shirts, Raises $35 Million Of Its Own</h4>
+                </a>
+                <div class="publisher">
+                    <i class="fa fa-bookmark"></i> Forbes
+                    &bull;
+                    Nov. 18, 2014
+                </div>
+
+                    <p>Teespring, the two-year-old custom apparel startup announced Tues. it's raised $35 million in a Series B round led by Khosla Ventures, with partner Keith Rabois joining the board. Earlier investors and board members include Lars Dalgaard of Andreessen Horowitz and Sam Altman of Y Combinator.</p>
+
+            </div>
+
+            <div class="partnership-card-section" data-news-and-press
+
+
+                        style="display: none;"
+                    >
+                <a target="_blank" href="http://www.rcnky.com/articles/2014/09/10/t-shirt-company-locate-hebron-will-create-nearly-300-new-jobs">
+                    <h4>T-shirt Company to Locate in Hebron, Will Create Nearly 300 New Jobs</h4>
+                </a>
+                <div class="publisher">
+                    <i class="fa fa-bookmark"></i> The River City News
+                    &bull;
+                    Sept. 10, 2014
+                </div>
+
+                    <p>Teespring, a manufacturer of custom T-shirts used for fundraising campaigns, plans to open a new facility in Hebron, creating nearly 300 new jobs and invest nearly $22 million into the project. </p>
+
+            </div>
+
+            <div class="partnership-card-section" data-news-and-press
+
+
+                        style="display: none;"
+                    >
+                <a target="_blank" href="http://techcrunch.com/2014/01/16/andreessen-horowitz-invests-20m-in-custom-apparel-platform-teespring/">
+                    <h4>Andreessen Horowitz Invests $20M In Custom Apparel Platform Teespring</h4>
+                </a>
+                <div class="publisher">
+                    <i class="fa fa-bookmark"></i> TechCrunch
+                    &bull;
+                    Jan. 17, 2014
+                </div>
+
+                    <p>Teespring, a FundersClub and Y Combinator-backed startup that allows anyone to outsource the production and distribution costs involved with selling their own custom T-shirts, has raised $20 million in new funding in a round entirely led by Andreessen Horowitz. </p>
+
+            </div>
+
+            <div class="partnership-card-section" data-news-and-press
+
+
+                        style="display: none;"
+                    >
+                <a target="_blank" href="http://www.nytimes.com/2013/05/05/magazine/y-combinator-silicon-valleys-start-up-machine.html?_r=1&amp;">
+                    <h4>SILICON VALLEY&#39;S STARTUP MACHINE </h4>
+                </a>
+                <div class="publisher">
+                    <i class="fa fa-bookmark"></i> New York Times
+                    &bull;
+                    May 5, 2013
+                </div>
+
+                    <p>Last year at Brown University, Walker Williams and Evan Stites-Clayton created Teespring, a crowdfunding Web site that sold custom-made apparel — "Kickstarter for T-shirts." For six months they had mild success with fraternities and campus clubs but were only slightly profitable. </p>
+
+            </div>
+
+            <div class="partnership-card-section" data-news-and-press
+
+
+                        style="display: none;"
+                    >
+                <a target="_blank" href="http://venturebeat.com/2013/03/26/y-combinators-surprise-hit-teespring-a-nerdy-t-shirt-startup/">
+                    <h4>Y COMBINATOR&#39;S SURPRISE HIT: TEESPRING, A NERDY T-SHIRT STARTUP</h4>
+                </a>
+                <div class="publisher">
+                    <i class="fa fa-bookmark"></i> VentureBeat
+                    &bull;
+                    March 26, 2013
+                </div>
+
+                    <p>But a startup called Teespring is generating a huge buzz at Y Combinator's demo day. The company presented today to a roomful of investors and press, and announced that it pulled in $750,000 in revenues in a single month.
+</p>
+
+            </div>
+
+            <div class="partnership-card-section" data-news-and-press
+
+
+                        style="display: none;"
+                    >
+                <a target="_blank" href="http://venturebeat.com/2013/03/19/yc-startup-teespring-the-kickstarter-for-t-shirts-growing-50-monthly-hits-750k-monthly-sales/">
+                    <h4>YC STARTUP TEESPRING, THE &quot;KICKSTARTER FOR T-SHIRTS,&quot; GROWING 50% MONTHLY, HITS $750K MONTHLY SALES </h4>
+                </a>
+                <div class="publisher">
+                    <i class="fa fa-bookmark"></i> VentureBeat
+                    &bull;
+                    March 19, 2013
+                </div>
+
+                    <p>Y Combinator startup Teespring is growing revenues a massive 50% month-over-month while selling custom T-shirts for clients as diverse as Node.js, Hacker News, and a memorial for three air ambulance crew members who lost their lives in the line of duty last year. The startup is still in the YC 2013 winter class and has already hit $750,000 in monthly revenue.
+</p>
+
+            </div>
+
+            <div class="partnership-card-section" data-news-and-press
+
+
+                        style="display: none;"
+                    >
+                <a target="_blank" href="http://www.forbes.com/sites/alextaub/2013/01/03/teespring-is-this-rhode-island-based-startup-the-future-of-custom-apparel/">
+                    <h4>TEESPRING: IS THIS RHODE ISLAND BASED STARTUP THE FUTURE OF CUSTOM APPAREL?</h4>
+                </a>
+                <div class="publisher">
+                    <i class="fa fa-bookmark"></i> Forbes
+                    &bull;
+                    Jan. 3, 2013
+                </div>
+
+                    <p>To say Teespring is a hit with the team is an understatement. It addresses every issue an upstart apparel brand has.</p>
+
+            </div>
+
+            <div class="partnership-card-section" data-news-and-press
+
+
+                        style="display: none;"
+                    >
+                <a target="_blank" href="http://techcrunch.com/2012/10/11/teespring-wants-to-be-the-place-where-you-can-crowdfund-anything-is-starting-with-t-shirts/">
+                    <h4>TEESPRING WANTS TO BE THE PLACE WHERE YOU CAN CROWDFUND ANYTHING, STARTING WITH T-SHIRTS</h4>
+                </a>
+                <div class="publisher">
+                    <i class="fa fa-bookmark"></i> TechCrunch
+                    &bull;
+                    Oct. 11, 2012
+                </div>
+
+                    <p>At first glance, Teespring looks like it's trying to become a Kickstarter for t-shirts, with its recently launched website that allows anyone to design custom tees which are then crowdfunded into production. But as co-founder Walker Williams explains, the two business models are not quite the same.</p>
+
+            </div>
+
+
+            <a class="partnership-card-footer show-all-link" href="javascript:;"
+                    data-show-all-news-and-press>
+                Show all News and Press
+                <span class="text-muted">
+                    (13 more)
+                </span>
+            </a>
+
+    </div>
+
+    <script>
+
+        $(function() {
+            $('[data-show-all-news-and-press]').on('click', function(e) {
+                $('[data-news-and-press]').show();
+                $(this).hide();
+            });
+        });
+    </script>
+
+
+
+
+
+        <a class="twitter-timeline partnership-card"
+                data-widget-id="405853734854332416">
+            <div class="partnership-card-section">
+                Loading Tweets...
+            </div>
+        </a>
+
+
+
+        </div>
+
+
+        <div class="col-xs-12 col-md-6">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="partnership-card">
+                <div class="partnership-card-header">
+                    <h3>Founders / Key Team</h3>
+                </div>
+                <div data-for="fundfounder_set" class="founders-and-team">
+
+
+
+
+
+
+
+<div class="partnership-card-section" data-id="238" itemscope itemtype="http://schema.org/Person" ng-repeat = "person in companies">
+    <div class="founder">
+        <div class="founder-picture">
+
+                <img itemprop="image" src="./images/ico/extras/user.png" alt="Walker Williams">
+
+        </div>
+        <div class="founder-info">
+
+                <h5 itemprop="name">
+ 						{{person.username}}
+                </h5>
+                <div itemprop="jobTitle" class="founder-title">Co-Founder</div>
+                <p itemprop="description"></p>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="partnership-card-section" data-id="239" itemscope itemtype="http://schema.org/Person" ng-repeat = "person in companies">
+    <div class="founder">
+        <div class="founder-picture">
+
+                <img itemprop="image" src="./images/ico/extras/user.png" alt="Evan Stites-Clayton">
+
+        </div>
+        <div class="founder-info">
+
+                <h5 itemprop="name">
+                    {{person.username}}
+
+                </h5>
+                <div itemprop="jobTitle" class="founder-title">Co-Founder</div>
+                <p itemprop="description"></p>
+
+        </div>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+    </div>
+
+            </div>
+</section>
