@@ -124,8 +124,10 @@ $scope.there = function() {
   function ($scope, $timeout, $window, Authentication, FileUploader, $http, $rootScope, $modal ) {
     // This provides Authentication context.
     $scope.editProfile = Authentication.editProfile;
-  //  var editProfile = {firstName: '',bannerImageURL: '', videoURL: ''};
+    $scope.editProfile = {firstName: '',bannerImageURL: '', videoURL: ''};
     $scope.bannerImageURL = $scope.editProfile.bannerImageURL;
+    $scope.videoURL = $scope.editProfile.videoURL;
+
     // $rootScope.current_user_banner = $scope.editProfile.bannerImageURL;
     // $scope.bannerimageURL = $rootScope.current_user_banner;
 
@@ -150,7 +152,7 @@ $scope.there = function() {
     }
     // Create file uploader instance
     $scope.uploader = new FileUploader({
-      url: 'api/core/uploadVideo'
+      url: '/api/core/uploadVideo'
     });
 
     // Set file uploader image filter
@@ -170,7 +172,7 @@ $scope.there = function() {
 
         fileReader.onload = function (fileReaderEvent) {
           $timeout(function () {
-            $scope.bannerImageURL = fileReaderEvent.target.result;
+            $scope.videoURL = fileReaderEvent.target.result;
           }, 0);
         };
       }
@@ -210,6 +212,7 @@ $scope.there = function() {
     // });
     // //
     $scope.uploadVideo = function() {
+      console.log('hello upload');
       $scope.success = $scope.error = null;
 
       // Start upload
