@@ -126,7 +126,7 @@ $scope.there = function() {
     $scope.editProfile = Authentication.editProfile;
     $scope.editProfile = {firstName: '',bannerImageURL: '', videoURL: ''};
     $scope.bannerImageURL = $scope.editProfile.bannerImageURL;
-    $scope.videoURL = $scope.editProfile.videoURL;
+   // $scope.videoURL = $scope.editProfile.videoURL;
 
     // $rootScope.current_user_banner = $scope.editProfile.bannerImageURL;
     // $scope.bannerimageURL = $rootScope.current_user_banner;
@@ -152,7 +152,7 @@ $scope.there = function() {
     }
     // Create file uploader instance
     $scope.uploader = new FileUploader({
-      url: '/api/core/uploadVideo'
+      url: '/api/core/uploadBanner'
     });
 
     // Set file uploader image filter
@@ -160,7 +160,7 @@ $scope.there = function() {
       name: 'imageFilter',
       fn: function (item, options) {
         var type = '|' + item.type.slice(item.type.lastIndexOf('/') + 1) + '|';
-        return '|jpg|png|jpeg|bmp|gif|mp4|avi|'.indexOf(type) !== -1;
+        return '|jpg|png|jpeg|bmp|gif|mp4|avi|webm|flv'.indexOf(type) !== -1;
       }
     });
 
@@ -172,7 +172,7 @@ $scope.there = function() {
 
         fileReader.onload = function (fileReaderEvent) {
           $timeout(function () {
-            $scope.videoURL = fileReaderEvent.target.result;
+            $scope.bannerImageURL = fileReaderEvent.target.result;
           }, 0);
         };
       }
@@ -211,12 +211,12 @@ $scope.there = function() {
     //   url: 'api/core/uploadVideo'
     // });
     // //
-    $scope.uploadVideo = function() {
-      console.log('hello upload');
-      $scope.success = $scope.error = null;
+    // $scope.uploadVideo = function() {
+    //   console.log('hello upload');
+    //   $scope.success = $scope.error = null;
 
-      // Start upload
-      $scope.uploader.uploadAll();
+    //   // Start upload
+    //   $scope.uploader.uploadAll();
 
       // $http.post('/api/core/uploadVideo' , $scope.editProfile).success(function(data){
       //     if(data.state == 'success'){
@@ -224,7 +224,7 @@ $scope.there = function() {
       //       $location.path('home.profile');
       //     }
       // });
-    }
+    
 
 }
 ]).controller('BrowseController', ['$scope', '$rootScope', '$location', '$http','Authentication',
